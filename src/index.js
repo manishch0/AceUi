@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Button from './components/Button/Button';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Button style={{backgroundColor:"red"}} isLoading={true} onClick={()=>{console.log("Hit me")}}>Hello button</Button>
   </React.StrictMode>
 );
 

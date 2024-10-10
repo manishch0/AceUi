@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin: 12px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    align-items: center;
+    gap:10px;
+}
