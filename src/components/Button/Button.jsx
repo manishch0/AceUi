@@ -5,15 +5,15 @@ import Loader from "../Loader/Loader";
 
 function Button(props) {
     const { children, isLoading = false, onClick = () => { }, style = {} } = props
-
+    
     return (
         <>
-            <button style={style} aria-disabled={"true"} onClick={(event) => {
+            <button data-testid="button-id"  id="button-id" style={style} aria-disabled={"true"} onClick={(event) => {
                 if (isLoading) {
                     return;
                 }
                 return onClick(event);
-            }} className="btn">{isLoading && (<Loader></Loader>)}{children}</button>
+            }} className="btn">{isLoading && (<Loader data-testid="button-loader" id="button-loader"></Loader>)}{children}</button>
         </>
     )
 }
