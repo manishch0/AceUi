@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Button from "./components/Button/Button";
+import App from "./app";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Button
+    {/* <Button
       style={{ backgroundColor: "red" }}
       isLoading={true}
       onClick={() => {
@@ -15,7 +15,9 @@ root.render(
       }}
     >
       Hello button
-    </Button>
+    </Button> */}
+    <App />
+
   </React.StrictMode>
 );
 
