@@ -6,7 +6,8 @@ import Accordion from "./components/Accordion/Accordion";
 function App() {
   const [check, setCheck] = useState(false);
   return (
-    // <div>
+    <div>
+      {/* 
     //   <Checkbox
     //     label={"apple"}
     //     check={check}
@@ -14,37 +15,17 @@ function App() {
     //       setCheck(value);
     //     }}
     //   />
-    // </div>
-    <div>
+     */}
+
       {/* <Button type="secondary">Hello Button</Button> */}
-      <Accordion
-        items={[
-          {
-            title: "Hello One",
-            content: (
-              <div>
-                <h1>hello h1 title </h1>
-              </div>
-            ),
-          },
-          {
-            title: "Hello two",
-            content: (
-              <div>
-                <h1>hello h1 title </h1>
-              </div>
-            ),
-          },
-          {
-            title: "Hello three",
-            content: (
-              <div>
-                <h1>hello h1 title </h1>
-              </div>
-            ),
-          },
-        ]}
-      ></Accordion>
+      <Accordion>
+        <Accordion.Item key="1" label="Heading 1">
+          this is content
+        </Accordion.Item>
+        <Accordion.Item key="2" label="Heading 2">
+          bla blab lab bla
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }
