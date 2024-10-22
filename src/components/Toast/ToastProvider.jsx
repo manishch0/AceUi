@@ -9,20 +9,15 @@ export const ToastProvider = ({ children }) => {
     type: "",
   });
 
-  useEffect(() => {
-    if (toast.visible) {
-      let timerId = setTimeout(() => {
-        setToast({ visible: false, title: "" });
-        clearTimeout(timerId);
-      }, 1500);
-    }
-  }, [toast.visible]);
-
   return (
     <ToastContext.Provider value={{ ...toast, setToast }}>
       {children}
       {toast.visible && (
-        <ToastMessage type={toast.type} title={toast.title}></ToastMessage>
+        <ToastMessage
+          type={toast.type}
+          title={toast.title}
+          visible={toast.visible}
+        ></ToastMessage>
       )}
     </ToastContext.Provider>
   );
