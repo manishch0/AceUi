@@ -2,7 +2,17 @@
   "name": "aceui",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "serve":"serve -s ./build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "12.1.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,14 +20,6 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -52,9 +54,13 @@
     "@storybook/react": "^8.3.5",
     "@storybook/react-webpack5": "^8.3.5",
     "@storybook/test": "^8.3.5",
+    "autoprefixer": "^9.8.8",
     "eslint-plugin-storybook": "^0.9.0",
+    "postcss": "^7.0.39",
     "prop-types": "^15.8.1",
+    "serve": "^14.2.4",
     "storybook": "^8.3.5",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "webpack": "^5.95.0"
   }
 }
