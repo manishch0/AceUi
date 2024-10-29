@@ -1,8 +1,10 @@
-import React from "react";
+import React, { forwardRef, memo } from "react";
 import Loader from "../Loader/Loader";
 import button from "./tv";
+import { useButton } from "react-aria";
 
-function Button(props) {
+const Button = forwardRef(function Button(props, ref) {
+  let { buttonProps, isPressed } = useButton(props, ref);
   const {
     children,
     isLoading = false,
@@ -15,8 +17,9 @@ function Button(props) {
   return (
     <>
       <button
+        {...buttonProps}
         data-testid="button-id"
-        className={button({ size: size, color: type })}
+        className={button({ size: size, color: type, isPressed: isPressed })}
         id="button-id"
         onClick={(event) => {
           if (isLoading) {
@@ -36,6 +39,6 @@ function Button(props) {
       </button>
     </>
   );
-}
+});
 
-export default Button;
+export default memo(Button);

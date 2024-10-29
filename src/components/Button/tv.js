@@ -12,6 +12,9 @@ const button = tv({
       md: "text-base",
       lg: "px-4 py-3 text-lg",
     },
+    isPressed: {
+      true: "opacity-50 bg-gray-500 pointer-events-none",
+    },
   },
   compoundVariants: [
     {
